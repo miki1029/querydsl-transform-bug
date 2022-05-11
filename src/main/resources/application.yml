@@ -1,0 +1,11 @@
+spring:
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+        generate_statistics: true
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG # SQL Logging
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE # binding parameter
