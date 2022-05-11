@@ -1,24 +1,19 @@
 package com.example.querydsltransformbug;
 
-import static com.example.querydsltransformbug.QParent.parent;
-import static com.querydsl.core.group.GroupBy.groupBy;
-
 import java.util.Map;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.data.jpa.repository.support.QuerydslRepositorySupport;
 
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @SpringBootApplication
-public class QuerydslTransformBugApplication extends QuerydslRepositorySupport implements CommandLineRunner {
+public class QuerydslTransformBugApplication implements CommandLineRunner {
     private final ParentService parentService;
 
     public QuerydslTransformBugApplication(ParentService parentService) {
-        super(Parent.class);
         this.parentService = parentService;
     }
 
